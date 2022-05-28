@@ -11,6 +11,7 @@ width: 100vw;
 height: 100vh;
 justify-content: center;
 align-items: center;
+
 background: linear-gradient(to right,rgb(255, 182, 185),rgb(250, 227, 217));
 `
 const Wrapper = styled.div`
@@ -19,8 +20,10 @@ background-color: white;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
+padding: 15px 15px;
 /* align-items: center; */
 border-radius: 5px;
+margin: 0px 10px;
 background-color: white;
 /* background: linear-gradient(to right ,rgb(249, 206, 238),rgb(249, 243, 238)); */
 box-shadow: -16px 16px 13px -12px rgba(0,0,0,0.69);;
