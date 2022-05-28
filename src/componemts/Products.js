@@ -17,7 +17,7 @@ function Products({filters,sort,cat}) {
   useEffect(()=>{
   const fetchProduct=async()=>{
    try{
-    const data=await axios.get( cat? `http://localhost:5000/api/products?category=${cat}` : "http://localhost:5000/api/products" )
+    const data=await axios.get( cat? `https://rohitshop.herokuapp.com/api/products?category=${cat}` : "https://rohitshop.herokuapp.com/api/products" )
     setProducts(data.data)
    }catch(err){
      console.log(err)
