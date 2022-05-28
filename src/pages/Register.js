@@ -1,3 +1,4 @@
+import { style } from "@mui/system"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import styled from "styled-components"
@@ -13,9 +14,7 @@ align-items: center;
 background: linear-gradient(to right,rgb(255, 182, 185),rgb(250, 227, 217));
 `
 const Wrapper = styled.div`
-height: 23em;
-width: 35vw;
-min-width: 25em;
+min-width: 20em;
 background-color: white;
 display: flex;
 flex-direction: column;
@@ -26,25 +25,58 @@ background-color: white;
 /* background: linear-gradient(to right ,rgb(249, 206, 238),rgb(249, 243, 238)); */
 box-shadow: -16px 16px 13px -12px rgba(0,0,0,0.69);;
 `
+const Top=styled.div`
+display: flex;
+justify-content: flex-start;
+align-items: center;
+padding: 10px 0px 0px 5px;
+`
+
 const Title = styled.h2`
 font-size: 2em;
-padding-left: 10px;
-padding-top: 10px;
+`
+const Bottom=styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px 0px;
 `
 const Form = styled.form`
-margin-top: 20px;
-padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
 `
+const FormTop=styled.div`
+display: flex;
+flex-direction: column;
+`
+const InputTop=styled.div`
+display: flex;
+`
+const InputCenter=styled.div`
+display: flex;
+`
+const InputBottm=styled.div`
+`
+
+
 const Input = styled.input`
 margin: 10px;
 padding: 5px;
 border: 1px solid lightgray;
 outline: none;
 `
+const FormCenter=styled.div`
+`
+
 const Aggrements = styled.p`
 display: flex;
 margin: 10px 10px;
 flex-wrap: wrap;
+`
+
+const FormBottom=styled.div`
 `
 const Button = styled.button`
 padding: 10px 40px;
@@ -91,16 +123,35 @@ function Register() {
   return (
     <Container>
         <Wrapper>
-            <Title>CREATE AN ACCOUNT</Title>
-            <Form>
-                <Input type="text" name="firstname" onChange={setUser} placeholder="First Name"></Input>
+          <Top>
+          <Title>CREATE AN ACCOUNT</Title>
+          </Top>
+          <Bottom>
+          <Form>
+            <FormTop>
+              <InputTop>
+              <Input type="text" name="firstname" onChange={setUser} placeholder="First Name"></Input>
                 <Input type="text" name="lastname" onChange={setUser} placeholder="Last Name"></Input>
-                <Input type="text" name="username" onChange={setUser} placeholder="Username"></Input>
+              </InputTop>
+              <InputCenter>
+              <Input type="text" name="username" onChange={setUser} placeholder="Username"></Input>
                 <Input type="text" name="email" onChange={setUser} placeholder="Email"></Input>
-                <Input type="password" name="password" onChange={setUser} placeholder="Confirm Password"></Input>
-                <Aggrements>By continuing, I agree to the <Term>Terms of Use</Term> & <Term>Privacy Policy</Term></Aggrements>
-                <Button onClick={handleRegister}>Submit</Button>
+              </InputCenter>
+              <InputBottm>
+              <Input type="password" name="password" onChange={setUser} placeholder="Password"></Input>
+              </InputBottm>
+                
+                
+                
+            </FormTop>
+            <FormCenter>
+            <Aggrements>By continuing, I agree to the <Term>Terms of Use</Term> & <Term>Privacy Policy</Term></Aggrements>
+            </FormCenter>
+            <FormBottom>
+            <Button onClick={handleRegister}>Submit</Button>
+            </FormBottom>  
             </Form>
+          </Bottom> 
         </Wrapper>
     </Container>
   )
