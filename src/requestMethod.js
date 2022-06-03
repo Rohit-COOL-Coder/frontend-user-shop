@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const BaseUrl="https://rohitshop.herokuapp.com/api"
-const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNjQxNTZjNTY5ZWI1MmQ0OGI1NDIyYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1MzQxODQzNiwiZXhwIjoxNjUzNjc3NjM2fQ.yiH15GnVNRlJs2wrlay2fHRyZIqPqT55DSlw-Ck0pu4"
+const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNjQxNTMwNTY5ZWI1MmQ0OGI1NDIyOSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NTQyMjQ2OTUsImV4cCI6MTY1NDQ4Mzg5NX0.1iL2a6HkUuOxGdh7Vtr7kOWNenShpwFmUe0UV99hlCk"
 
 export const publicRequest=axios.create({
     baseURL:BaseUrl
